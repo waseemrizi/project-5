@@ -22,7 +22,11 @@ body{
   text-align: center;
   
 }
-.section-2 > button {
+.typewriter {
+  color: white;
+}
+
+/* .section-2 > button {
   font-size: larger;
   font-weight: bold;
   width: 30vh;
@@ -32,11 +36,11 @@ padding: 3px;
 
 border: none;
 
-  }
+  } */
 
-.section-1 > button:hover {
+/* .section-1 > button:hover {
   background-color: #36cadb
-}
+} */
 
 
   .w {

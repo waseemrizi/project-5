@@ -1,15 +1,53 @@
-import React from 'react'
+import React  from 'react'
 import './Section.css'
+// import styled from 'styled-components';
+import { motion } from "framer-motion"
+import Typewriter from 'typewriter-effect';
+import Over from './Over';
 //import bc from './bc.jpg';
+
+
+//button code 
+// const Button = styled.button`
+//   color: blue;
+//   font-size: 1em;
+//   margin: 1em;
+//   padding: 0.25em 1.7em;
+//   border: 2px solid white;
+//   border-radius: 8px;
+//   &: hover {
+//       background-color: #06C9DB;
+      
+//   }
+// `;
 
 const Section = () => {
     return (
         <div className="section-1">
-            <div className="section-2">
-            <h1>Education For All</h1>
-        <p>this is our paragraph <br /> i am trying to add some animations <br /> on that but i dont know how <br /> to do that i knew little <br /> bit more than <br /> little bit easiy</p>
-            <button>Courses</button>
+            <motion.div className="section-2"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, scale: 1.3, color: 'blue' }}
+                transition={{ duration: 5 }}
+            >
+                <h1>Education For All</h1>
+                <h2 className="typewriter">
+                <Typewriter
+  options={{
+    strings: ['Education is the only thing that can chnage the whole world'],
+    autoStart: true,
+    loop: true,
+    
+  }}
+/>
+ </h2>
+            <Over />
+
+                {/* <Button>Contact</Button> */}
+            </motion.div>
+            <div>
+            
             </div>
+
         </div>
     )
 }

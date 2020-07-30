@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Burger from './Burger';
+import { motion } from 'framer-motion';
 
 const Nav = styled.nav`
 // background-color: #3f51b5;
@@ -12,6 +13,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   .logo {
     padding: 15px 0;
+    color: blue;
     
   }
 `
@@ -19,9 +21,14 @@ const Nav = styled.nav`
 const Navbar = () => {
   return (
     <Nav>
-      <div className="logo">
+      <motion.div className="logo"
+      initial={{opacity:0}}
+      animate={{opacity: 0.9, scale: 1.2}}
+      >
+        
         Company Name
-      </div>
+      </motion.div>
+      
       <Burger />
     </Nav>
   )

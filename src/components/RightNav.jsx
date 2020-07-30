@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Ul = styled.ul`
   list-style: none;
@@ -9,6 +10,7 @@ const Ul = styled.ul`
   li {
     padding: 18px 10px;
   }
+  
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
@@ -24,7 +26,9 @@ const Ul = styled.ul`
 
     li {
       color: #fff;
+      
     }
+    
     
   }
 `;
@@ -32,11 +36,13 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <li>Home</li>
-      <li>About Us</li>
-      <li>Contact Us</li>
-      <li>Sign In</li>
-      <li>Sign Up</li>
+     <li><Link to="/">Home</Link></li>
+     <li><Link to="/about">About </Link></li>
+     <li><Link to="/contact">Contact</Link></li>
+     <li><Link to="/">Sign In</Link></li>
+     <li><Link to="/">Sign Up</Link></li>
+     <li><Link to="/">Feature</Link></li>
+      
     </Ul>
   )
 }
