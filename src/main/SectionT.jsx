@@ -19,7 +19,7 @@ export const SectionT = () => {
             <motion.Card style={{ width: '18rem' }} key={index} className="box"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 1.9 }}>
-                <Card.Img variant="top" src="holder.js/100px180" src={cr.pic} />
+                <Card.Img variant="top"  src={cr.pic} />
                 <Card.Body>
                     <Card.Title>{cr.que}</Card.Title>
                     <Card.Text>{cr.desc}</Card.Text>
